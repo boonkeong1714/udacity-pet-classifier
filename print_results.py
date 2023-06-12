@@ -82,7 +82,7 @@ def print_results(results_dic, results_stats_dic, model,
         for key in results_dic:
             # TODO: 6c
             if (results_dic[key][3] == 1 and results_dic[key][4] == 0) or (results_dic[key][3] == 0 and results_dic[key][4] == 1):
-                print(results_dic[key][0])
+                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0], results_dic[key][1]))
 
     if (print_incorrect_breed and 
         (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']) 

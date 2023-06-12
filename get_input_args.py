@@ -40,7 +40,7 @@ def get_input_args():
                     description='Identify Dog Breeds',)
 
     parser.add_argument('--dir', type=str, default='pet_images/', help='path to folder of images')
-    parser.add_argument('--arch', type=str, default='vgg', help='CNN Model Architecture')
+    parser.add_argument('--arch', type=str, default='vgg', choices = ["vgg", "alexnet", "resnet"], help='CNN Model Architecture')
     parser.add_argument('--dogfile', type=str, default='dognames.txt', help='Text File with Dog Names')
 
     return parser.parse_args()

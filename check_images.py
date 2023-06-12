@@ -78,3 +78,9 @@ def main():
 # Call to main function to run the program
 if __name__ == "__main__":
     main()
+
+
+# Thanks for your feedbacks, 
+# I read all of them carefully, and they are all good suggestions
+# Due to submission time constraints, I didn't implement all.
+# Just want to say I really appreacite it :)

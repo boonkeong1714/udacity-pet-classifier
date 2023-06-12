@@ -42,9 +42,9 @@ def get_pet_labels(image_dir):
     
     results_dic = dict()
 
-    for idx in range(len(in_files)):
-       if in_files[idx][0] != ".":
-           low_pet_image = in_files[idx].lower()
+    for filename in in_files:
+       if filename[0] != ".":
+           low_pet_image = filename.lower()
            word_list_pet_image = low_pet_image.split("_")
 
            pet_label = ""
@@ -55,10 +55,10 @@ def get_pet_labels(image_dir):
            pet_label = pet_label.strip()
 
            # TODO: 2a
-           if in_files[idx] not in results_dic:
-              results_dic[in_files[idx]] = [pet_label]              
+           if filename not in results_dic:
+              results_dic[filename] = [pet_label]              
            else:
-               print("** Warning: Duplicate files exist in directory:", in_files[idx])
+               print("** Warning: Duplicate files exist in directory:", filename)
  
     # print("-----get_pet_labels: results_dic-----", results_dic)
     return results_dic
